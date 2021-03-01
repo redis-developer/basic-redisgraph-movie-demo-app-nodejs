@@ -1,0 +1,22 @@
+exports.genres = [
+  { genre: 'Adventure' },
+  { genre: 'Animation' },
+  { genre: 'Children' },
+  { genre: 'Comedy' },
+  { genre: 'Fantasy' },
+  { genre: 'Romance' },
+  { genre: 'Drama' },
+  { genre: 'Action' },
+  { genre: 'Crime' },
+  { genre: 'Thriller' },
+  { genre: 'Horror' },
+  { genre: 'Mystery' },
+  { genre: 'Sci-Fi' },
+  { genre: 'Documentary' },
+  { genre: 'IMAX' },
+  { genre: 'War' },
+  { genre: 'Musical' },
+  { genre: 'Western' },
+  { genre: 'Film-Noir' },
+  { genre: '(no genres listed)' }
+];
