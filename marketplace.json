@@ -1,0 +1,40 @@
+{
+  "app_name": "Redis Graph Movies",
+  "description": "Showcases how to use RedisGraph BE in NodeJS",
+  "type": "Building Block",
+  "contributed_by": "Redis Labs",
+  "repo_url": "https://gitlab.com/teamProjects/neo4j-movie-app",
+  "download_url": "https://gitlab.com/teamProjects/neo4j-movie-app/-/archive/master/neo4j-movie-app-master.zip",
+  "hosted_url": {
+    "BE": "https://redis-be.herokuapp.com/",
+    "FE": "https://redis-fe.herokuapp.com/"
+  },
+  "quick_deploy": "true",
+  "deploy_buttons": [
+    {
+      "heroku": "https://heroku.com/deploy?template=https://gitlab.com/teamProjects/neo4j-movie-app"
+    }
+  ],
+  "language": ["JavaScript"],
+  "redis_commands": [
+    "MATCH",
+    "OPTIONAL_MATCH",
+    "WHERE",
+    "RETURN",
+    "ORDER_BY",
+    "SKIP",
+    "LIMIT",
+    "CREATE",
+    "MERGE",
+    "DELETE",
+    "SET",
+    "WITH",
+    "UNION"
+  ],
+  "redis_modules": ["RedisGraph"],
+  "app_image_urls": [],
+  "youtube_url": "",
+  "special_tags": [],
+  "verticals": ["Movies"],
+  "markdown": "https://gitlab.com/teamProjects/neo4j-movie-app/-/blob/master/README.md"
+}

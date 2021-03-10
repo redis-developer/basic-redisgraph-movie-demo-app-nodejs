@@ -311,7 +311,7 @@ exports.rateMovie = function(req, res, next) {
   loginRequired(req, res, () => {
     let { rating } = req.body;
     rating = Number(rating);
-    if (Number.isNaN(rating) || rating < 0 || rating >= 6) {
+    if (Number.isNaN(rating) || rating < 0 || rating >= 11) {
       throw { rating: 'Rating value is invalid', status: 400 };
     }
 

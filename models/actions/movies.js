@@ -24,7 +24,14 @@ const _singleMovieWithDetails = function(movie) {
  */
 
 function manyMovies(listOfMovies) {
-  return listOfMovies._results.map((r) => new Movie(r.get('movie')));
+  const movies = { movies: listOfMovies._results.map((r) => new Movie(r.get('movie'))) };
+
+  if (listOfMovies._results[0]) {
+    Object.assign(movies, { actor: listOfMovies._results[0].get('actor') });
+    Object.assign(movies, { director: listOfMovies._results[0].get('director') });
+  }
+
+  return movies;
 }
 
 // get all movies
@@ -35,6 +42,7 @@ const getAll = function(session) {
 
 // get a single movie by id
 const getById = function(session, movieId, userId) {
+  if (!userId) throw { message: 'invalid authorization key', status: 401 };
   const query = ['MATCH (movie:Movie {tmdbId: $movieId})\n'
     + '  OPTIONAL MATCH (movie)<-[my_rated:RATED]-(me:User {id: $userId})\n'
     + '  OPTIONAL MATCH (movie)<-[r:ACTED_IN_MOVIE]-(a:Actor)\n'
@@ -74,7 +82,7 @@ const getByDateRange = function(session, start, end) {
 
 // Get by date range
 const getByActor = function(session, id) {
-  const query = ['MATCH (actor:Actor {tmdbId: $id})-[:ACTED_IN_MOVIE]->(movie:Movie)', 'RETURN DISTINCT movie'].join('\n');
+  const query = ['MATCH (actor:Actor {tmdbId: $id})-[:ACTED_IN_MOVIE]->(movie:Movie)', 'RETURN DISTINCT movie,actor'].join('\n');
 
   return session.query(query, {
     id
@@ -96,7 +104,7 @@ const getByGenre = function(session, genreId) {
 
 // Get many movies directed by a person
 const getByDirector = function(session, personId) {
-  const query = ['MATCH (:Director {tmdbId: $personId})-[:DIRECTED]->(movie:Movie)', 'RETURN DISTINCT movie'].join('\n');
+  const query = ['MATCH (director:Director {tmdbId: $personId})-[:DIRECTED]->(movie:Movie)', 'RETURN DISTINCT movie,director'].join('\n');
 
   return session.query(query, {
     personId

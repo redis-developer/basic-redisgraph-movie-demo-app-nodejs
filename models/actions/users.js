@@ -54,7 +54,7 @@ const login = function(session, username, password) {
           if (dbUser.password !== hashPassword(username, password)) {
             throw { password: 'wrong password', status: 400 };
           }
-          return { token: dbUser.api_key };
+          return { token: dbUser.api_key, user: new User(record.get('user')) };
         }
       }
     });
