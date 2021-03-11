@@ -1,0 +1,32 @@
+.ratePage h4{
+    text-align: center;
+    margin-top: 0;
+}
+.ratePage span{
+    margin-left: 2%;
+    margin-right: 83%;
+    font-size: 1rem;
+}
+
+.ratePage ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+.ratePage ul li{
+    display: inline-block;
+    margin-right: 1%;
+    background: black;
+    color: white;
+    padding: 3%;
+}
+.ratePage ul li:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: 0.5s;
+}

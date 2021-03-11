@@ -1,0 +1,72 @@
+.authForm{
+    margin-top: 5%;
+}
+
+.authFormWrapper{
+    padding: 1%;
+    max-width: 40rem;
+    background-color: rgba(0,0,0,0.4);
+    margin: 0 auto;
+    position: relative;
+    border-radius: 0.5rem;
+}
+
+.authFormWrapper .authFormSection p{
+    margin-left: 7%;
+    color: red;
+}
+
+.authFormSection{
+    width: 100%;
+    height: 100%;
+}
+
+.authFormSection h3{
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 2%;
+    margin: 0;
+}
+
+.authFormSection input{
+    display: block;
+    width: 90%;
+    height: 2rem;
+    margin: 1rem auto;
+    background: none;
+    color: white;
+    border-radius: 0.9rem;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.authFormSection input:active{
+    color: white;
+    background: none;
+    border: rgba(255,255,255,0.3) solid 1px;
+}
+
+.authFormSection span{
+    font-size: 0.9rem;
+    margin-left: 3rem;
+}
+
+.authFormSection button{
+    width: 90%;
+    background: #1F811F;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 0.3rem;
+    display: block;
+    margin: 1% auto;
+    cursor: pointer;
+}
+
+.authFormSection #toSignIn, #toSignUp{
+    margin-top: 2.5%;
+    width: 25%;
+    background: none;
+}
+
+

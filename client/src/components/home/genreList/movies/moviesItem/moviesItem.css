@@ -1,0 +1,95 @@
+.card-film{
+    max-width: 15%;
+    margin: 3%;
+    position:relative;
+    -webkit-box-shadow: 0px 0px 18px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 18px 9px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 18px 9px rgba(0,0,0,0.75);
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 0.8rem;
+}
+
+div.card-film span{
+    display: block;
+    padding-bottom: 5%;
+}
+
+.card-film .modalWindow{
+    position: absolute;
+    z-index: 2;
+}
+
+.card-film .film-photo img{
+    width: 100%;
+}
+
+.card-film .film-photo .filmInfo{
+    position:absolute;
+    left:0;
+    bottom:1%;
+    right:0;
+    top:0;
+    background: rgba(29, 29, 29, 0.8);
+    display:none;
+    color: white;
+}
+
+.card-film .film-photo:hover .filmInfo{
+    display: block;
+}
+
+.card-film .film-photo:hover{
+    transform: scale(1.05);
+    transition-duration: 0.4s;
+}
+
+.card-film .film-photo:hover img{
+    filter: blur(1px);
+}
+
+.card-film{
+    cursor: pointer;
+}
+
+.card-film .film-photo .filmInfo .rating{
+    position: relative;
+    background: #5b5b5b;
+    width: 75%;
+    height: 2%;
+    margin-top: 1%;
+    margin-left: 5%;
+    border-radius: 1rem;
+}
+
+.card-film .film-photo .filmInfo .rating .rating-item{
+    width: 70%;
+    height: 100%;
+    background: #878787;
+    border-radius: 1rem;
+}
+
+.card-film .film-photo .filmInfo p:first-child{
+    margin-top: 93%;
+}
+
+.card-film .film-photo .filmInfo p{
+    margin-left: 5%;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    margin-top: 5%;
+}
+
+.card-film .film-title h4{
+    margin-left: 4%;
+    font-size: 0.9rem;
+    font-style: normal;
+}
+
+.card-film .modalWindow a{
+    color: black;
+    text-decoration: underline;
+    margin-left: 0;
+}
+.card-film .modalWindow h4{
+    text-align: center;
+}

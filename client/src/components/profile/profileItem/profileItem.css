@@ -1,0 +1,42 @@
+.profile h3{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.profilePage{
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+}
+
+.profilePage .profileImage{
+    flex: 2;
+}
+.profilePage .profileImage img{
+    width: 150px;
+}
+
+.profilePage .profileName{
+    flex: 10;
+}
+.profilePage .profileName h2{
+    font-size: 2rem;
+}
+
+.profilePage .profileName h2:first-letter{
+    text-transform: uppercase;
+}
+
+.profile .profilePage .logout button{
+    background: none;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border: 1px solid white;
+}
+.profile .profilePage .logout button:hover{
+    background: white;
+    color: black;
+    transition: 0.5s;
+    transform: scale(1.1);
+    cursor: pointer;
+}

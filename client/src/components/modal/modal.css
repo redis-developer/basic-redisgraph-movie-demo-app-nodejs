@@ -1,0 +1,46 @@
+.modal{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    /*transition: 0.1s;*/
+}
+
+.modal.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal__content{
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    transform: scale(0.5);
+    transition: 0.4s all;
+    width: 50vw;
+    height: 50vh;
+}
+
+.modal__content .active{
+    transform: scale(1);
+}
+
+.modal .active img{
+    margin-left: 90%;
+    width: 7%;
+}
+.modal .active img:hover{
+    cursor: pointer;
+}
+
+.modal .active{
+    color: black;
+    font-size: 2rem;
+}

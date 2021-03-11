@@ -1,0 +1,22 @@
+.errorPage{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 20%;
+}
+.errorPage .errorWrapper{
+    background: white;
+    padding: 3%;
+    border-radius: 50%;
+    color: black;
+    text-align: center;
+}
+
+.errorPage .errorWrapper h2{
+    display: block;
+    font-size: 2rem;
+}
+.errorPage .errorWrapper p{
+    display: block;
+    font-size: 1.3rem;
+}

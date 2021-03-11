@@ -1,0 +1,11 @@
+.footerSection{
+    margin-top: 8rem;
+    -webkit-box-shadow: 0px -11px 11px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -11px 11px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -11px 11px 0px rgba(0,0,0,0.75);
+    background-image: url("../../images/headerBg.jpg");
+    min-height: 5rem;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+}

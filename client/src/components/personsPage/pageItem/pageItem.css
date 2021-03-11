@@ -1,0 +1,29 @@
+.personInfoPage{
+    padding: 3%;
+}
+
+.personInfoPage .personInfoWrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.personInfoPage .personInfoWrapper .personImage{
+    flex: 2;
+}
+
+.personInfoPage .personInfoWrapper .personInfoText{
+    flex: 3
+}
+.personInfoPage .personInfoWrapper .personInfoText h4{
+    font-size: 2rem;
+    margin-top: 0;
+}
+.personInfoPage .personInfoWrapper .personInfoText p{
+    font-size: 1.2rem;
+}
+
+.personInfoPage h3{
+    margin-left: 3%;
+    font-size: 1.5rem;
+    margin-top: 3%;
+}

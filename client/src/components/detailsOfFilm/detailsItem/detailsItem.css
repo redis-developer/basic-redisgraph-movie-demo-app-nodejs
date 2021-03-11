@@ -1,0 +1,107 @@
+.details{
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+.details h3{
+    margin-top: 2.1rem;
+    font-size: 1.5rem;
+}
+
+.details-page{
+    display: flex;
+    flex-direction: row;
+}
+
+.details-page .detailsImg{
+    flex: 2;
+}
+
+.details-page .detailsImg img{
+    width: 70%;
+}
+
+.details-page .details-information{
+    flex: 3;
+}
+
+.details-page .details-information h2{
+    font-size: 2.3rem;
+    margin-top: 0;
+}
+.details-page .details-information p{
+    font-size: 1.2rem;
+    margin: 3% 0;
+}
+.details-page .details-information span{
+    font-size: 1.1rem;
+}
+.details-page .details-information .rateFilm button{
+    margin-left: 5px;
+    margin-top: 1rem;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 0.7rem 1.2rem;
+}
+.details-page .details-information .rateFilm button:hover{
+    background: white;
+    color: black;
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.details .details-film-actors{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.details .details-film-actors .card-actor{
+    margin-right: 5%;
+    max-width: 140px;
+    text-align: center;
+    font-size: 1.1rem;
+    background: black;
+    -webkit-box-shadow: 0px 0px 18px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 18px 9px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 18px 9px rgba(0,0,0,0.75);
+}
+.details .details-film-actors .card-actor:hover{
+    cursor: pointer;
+}
+.details .details-film-actors .card-actor:hover img{
+    transform: scale(1.05);
+    transition-duration: 0.4s;
+}
+.details .details-film-actors .card-actor .photoActor img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+}
+
+.details .details-film-actors .card-actor .photoActor img:first-child{
+    height: 180px;
+    width: 100%;
+}
+
+
+.details .details-page .details-information .ratingLine{
+    position: relative;
+    background: #5b5b5b;
+    width: 30%;
+    height: 5%;
+    margin-top: 1%;
+    border-radius: 1rem;
+}
+.details .details-page .details-information .ratingLine .ratingLineItem{
+    width: 70%;
+    height: 100%;
+    background: #878787;
+    border-radius: 1rem;
+    color: #5b5b5b;
+}
+
