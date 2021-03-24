@@ -1,0 +1,21 @@
+{
+  "name": "Node.JS RedisGraph movie-demo-app",
+  "env": {
+    "REDIS_CLOUD_HOST": {
+      "description": "A Redis cloud host URL.",
+      "required": true
+    },
+    "REDIS_CLOUD_PORT": {
+      "description": "A Redis cloud port",
+      "required": true
+    },
+    "REDIS_CLOUD_PASSWORD": {
+      "description": "A Redis password.",
+      "required": true
+    },
+    "GRAPH_NAME": {
+      "description": "Graph name where u want to work",
+      "required": true
+    }
+  }
+}
