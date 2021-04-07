@@ -1,5 +1,5 @@
 const Users = require('../models/actions/users');
-const { writeResponse } = require('../helpers/response');
+const {writeResponse} = require('../helpers/response');
 const loginRequired = require('../middlewares/loginRequired');
 const dbUtils = require('../db/dbUtils');
 
@@ -44,15 +44,15 @@ const dbUtils = require('../db/dbUtils');
  *       400:
  *         description: Error message(s)
  */
-exports.register = function(req, res, next) {
-  const { username } = req.body;
-  const { password } = req.body;
+exports.register = function (req, res, next) {
+  const {username} = req.body;
+  const {password} = req.body;
 
   if (!username) {
-    throw { username: 'This field is required.', status: 400 };
+    throw {username: 'This field is required.', status: 400};
   }
   if (!password) {
-    throw { password: 'This field is required.', status: 400 };
+    throw {password: 'This field is required.', status: 400};
   }
 
   Users.register(dbUtils.getSession(), username, password)
@@ -89,14 +89,14 @@ exports.register = function(req, res, next) {
  *       400:
  *         description: invalid credentials
  */
-exports.login = function(req, res, next) {
-  const { username, password } = req.body;
+exports.login = function (req, res, next) {
+  const {username, password} = req.body;
 
   if (!username) {
-    throw { username: 'This field is required.', status: 400 };
+    throw {username: 'This field is required.', status: 400};
   }
   if (!password) {
-    throw { password: 'This field is required.', status: 400 };
+    throw {password: 'This field is required.', status: 400};
   }
 
   Users.login(dbUtils.getSession(), username, password)
@@ -127,12 +127,15 @@ exports.login = function(req, res, next) {
  *       401:
  *         description: invalid / missing authentication
  */
-exports.me = function(req, res, next) {
+exports.me = function (req, res, next) {
   loginRequired(req, res, () => {
     const authHeader = req.headers.authorization;
     const match = authHeader.match(/^Token (\S+)/);
     if (!match || !match[1]) {
-      throw { message: 'invalid authorization format. Follow `Token <token>`', status: 401 };
+      throw {
+        message: 'invalid authorization format. Follow `Token <token>`',
+        status: 401,
+      };
     }
 
     const token = match[1];

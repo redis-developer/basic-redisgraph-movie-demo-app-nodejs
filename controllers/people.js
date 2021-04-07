@@ -1,5 +1,5 @@
 const People = require('../models/actions/people');
-const { writeResponse } = require('../helpers/response');
+const {writeResponse} = require('../helpers/response');
 const dbUtils = require('../db/dbUtils');
 
 /**
@@ -34,7 +34,7 @@ const dbUtils = require('../db/dbUtils');
  *           items:
  *             $ref: '#/definitions/Person'
  */
-exports.list = function(req, res, next) {
+exports.list = function (req, res, next) {
   People.getAll(dbUtils.getSession())
     .then((response) => writeResponse(res, response))
     .catch(next);
@@ -66,9 +66,9 @@ exports.list = function(req, res, next) {
  *       404:
  *         description: Person not found
  */
-exports.findById = function(req, res, next) {
-  const { id } = req.params;
-  if (!id) throw { message: 'Invalid id', status: 400 };
+exports.findById = function (req, res, next) {
+  const {id} = req.params;
+  if (!id) throw {message: 'Invalid id', status: 400};
 
   People.getById(dbUtils.getSession(), id)
     .then((response) => {

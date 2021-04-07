@@ -6,21 +6,25 @@ function _manyPeople(listOfPersons) {
 }
 
 // get a single person by id
-const getById = function(session, id) {
-  const query = ['MATCH (user:User {id: $id})', 'RETURN DISTINCT user'].join('\n');
+const getById = function (session, id) {
+  const query = ['MATCH (user:User {id: $id})', 'RETURN DISTINCT user'].join(
+    '\n',
+  );
 
-  return session.query(query, { id }).then((result) => {
+  return session.query(query, {id}).then((result) => {
     if (result.hasNext()) {
       const record = result.next();
       return new User(record.get('user'));
     }
-    throw { message: 'person not found', status: 404 };
+    throw {message: 'person not found', status: 404};
   });
 };
 
 // get all people
-const getAll = function(session) {
-  return session.query('MATCH (user:User) RETURN user').then((result) => _manyPeople(result));
+const getAll = function (session) {
+  return session
+    .query('MATCH (user:User) RETURN user')
+    .then((result) => _manyPeople(result));
 };
 
 module.exports = {

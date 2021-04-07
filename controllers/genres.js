@@ -1,5 +1,5 @@
 const Genres = require('../models/actions/genres');
-const { writeResponse } = require('../helpers/response');
+const {writeResponse} = require('../helpers/response');
 const dbUtils = require('../db/dbUtils');
 
 /**
@@ -32,7 +32,7 @@ const dbUtils = require('../db/dbUtils');
  *           items:
  *             $ref: '#/definitions/Genre'
  */
-exports.list = function(req, res, next) {
+exports.list = function (req, res, next) {
   Genres.getAll(dbUtils.getSession())
     .then((response) => writeResponse(res, response))
     .catch(next);

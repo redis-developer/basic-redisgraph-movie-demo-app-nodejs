@@ -2,7 +2,7 @@
 
 const _ = require('lodash');
 
-const Movie = function(_node, myRating) {
+const Movie = function (_node, myRating) {
   _.extend(this, _node.properties);
 
   if (this.duration) {
