@@ -97,7 +97,7 @@ api.use((err, req, res, next) => {
   } else next(err);
 });
 
-app.listen(app.get('port'), () => {
+app.listen(app.get('port'), '0.0.0.0', () => {
   console.log(
     `Express server listening on port ${app.get('port')} see docs at /docs`,
   );

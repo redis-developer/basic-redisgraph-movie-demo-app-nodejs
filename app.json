@@ -1,5 +1,6 @@
 {
   "name": "Node.JS Redis chat",
+  "stack": "container",
   "env": {
     "REDIS_ENDPOINT_URL": {
       "description": "A Redis cloud endpoint URL.",
