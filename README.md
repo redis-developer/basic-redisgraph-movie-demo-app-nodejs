@@ -75,10 +75,20 @@ npm install
 node app.js
 ```
 
-## Deployment
+## Try it out
 
-App already deployed on heroku("https://redis-fe.herokuapp.com/"), but if you want to deploy it again see the button vbelow
+#### Deploy to Heroku
 
-### Heroku
+<p>
+    <a href="https://heroku.com/deploy" target="_blank">
+        <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heorku" />
+    </a>
+</p>
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://gitlab.com/teamProjects/neo4j-movie-app)
+#### Deploy to Google Cloud
+
+<p>
+    <a href="https://deploy.cloud.run" target="_blank">
+        <img src="https://deploy.cloud.run/button.svg" alt="Run on Google Cloud" width="150px"/>
+    </a>
+</p>

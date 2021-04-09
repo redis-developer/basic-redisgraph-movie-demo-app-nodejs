@@ -1,18 +1,18 @@
 {
   "app_name": "Redis Graph Movies",
   "description": "Showcases how to use RedisGraph BE in NodeJS",
-  "type": "Building Block",
+  "type": "App",
   "contributed_by": "Redis Labs",
-  "repo_url": "https://gitlab.com/teamProjects/neo4j-movie-app",
-  "download_url": "https://gitlab.com/teamProjects/neo4j-movie-app/-/archive/master/neo4j-movie-app-master.zip",
-  "hosted_url": {
-    "BE": "https://redis-be.herokuapp.com/",
-    "FE": "https://redis-fe.herokuapp.com/"
-  },
+  "repo_url": "https://github.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs",
+  "download_url": "https://github.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/-/archive/master/neo4j-movie-app-master.zip",
+  "hosted_url": "",
   "quick_deploy": "true",
   "deploy_buttons": [
     {
-      "heroku": "https://heroku.com/deploy?template=https://gitlab.com/teamProjects/neo4j-movie-app"
+      "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs"
+    },
+    {
+      "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs.git"
     }
   ],
   "language": ["JavaScript"],
@@ -36,5 +36,5 @@
   "youtube_url": "",
   "special_tags": [],
   "verticals": ["Movies"],
-  "markdown": "https://gitlab.com/teamProjects/neo4j-movie-app/-/blob/master/README.md"
+  "markdown": "https://github.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/-/blob/master/README.md"
 }
