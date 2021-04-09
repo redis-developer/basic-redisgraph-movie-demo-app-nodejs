@@ -9,37 +9,76 @@ export const SignUp = ({
   setError,
 }) => {
   const handleSignUp = async (e) => {
+    setError(null);
     e.preventDefault();
     if (e.target[1].value === e.target[2].value) {
       const username = e.target[0].value;
       const password = e.target[1].value;
       const response = await userService.signUp({username, password});
-      if (!response) {
-        setError('Wrong password or user name...');
+      if (response.error) {
+        console.log(response.error);
+        if (response.error.username) {
+          setError(response.error.username);
+        } else {
+          setError('Wrong password or user name...');
+        }
       } else {
         setButton(!button);
       }
     } else {
-      setError('Wrong password or user name...');
+      setError("Passwords don't match");
     }
   };
 
   return (
     <div className={'authFormSection'}>
-      <h3>Create account</h3>
+      <h3 style={{marginBottom: 24}}>Create Account</h3>
       <div>
         <form action="" method="POST" onSubmit={handleSignUp}>
           <span>Enter your name</span>
-          <input type="text" name="username" required min={2} max={50} />
+          <div style={{padding: '0 20px'}}>
+            <input
+              type="text"
+              name="username"
+              required
+              min={2}
+              max={50}
+              style={{paddingLeft: 10, background: '#222'}}
+              placeholder="e.g., username"
+            />
+          </div>
           <span>Enter your password</span>
-          <input type="password" name="password" required />
+          <div style={{padding: '0 20px'}}>
+            <input
+              type="password"
+              name="password"
+              required
+              style={{paddingLeft: 10, background: '#222'}}
+              placeholder="e.g., ***********"
+            />
+          </div>
           <span>Repeat your password</span>
-          <input type="password" name="password" required />
+          <div style={{padding: '0 20px'}}>
+            <input
+              type="password"
+              name="password"
+              required
+              style={{paddingLeft: 10, background: '#222'}}
+              placeholder="e.g., ***********"
+            />
+          </div>
           <p>{error}</p>
-          <button type="submit">Create account</button>
+          <div style={{padding: '0 14px'}}>
+            <button type="submit">Create account</button>
+          </div>
         </form>
       </div>
-      <button onClick={handleChangeState} id="toSignIn">
+      <button
+        onClick={() => {
+          setError(null);
+          handleChangeState();
+        }}
+        id="toSignIn">
         Have an account?
       </button>
     </div>

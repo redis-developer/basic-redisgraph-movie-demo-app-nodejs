@@ -1,5 +1,6 @@
 .profile h3{
-    text-align: center;
+    text-align: left;
+    margin-left: 48px;
     font-size: 1.3rem;
 }
 
@@ -14,6 +15,12 @@
 }
 .profilePage .profileImage img{
     width: 150px;
+    border-radius: 50%;
+    margin-right: 24px;
+}
+
+.profileName h2 {
+    margin-top: 0;
 }
 
 .profilePage .profileName{

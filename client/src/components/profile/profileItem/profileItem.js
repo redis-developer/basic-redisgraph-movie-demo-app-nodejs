@@ -10,7 +10,7 @@ export const ProfileItem = ({user, films, handleLogOut}) => {
           <img src={user.avatar.full_size} alt="avatar" />
         </div>
         <div className={'profileName'}>
-          <h2>{user.username}</h2>
+          <h2>{user.username}: Profile</h2>
         </div>
         <div className={'logout'}>
           <button onClick={handleLogOut}>Log out</button>

@@ -1,6 +1,6 @@
 .film-row{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }

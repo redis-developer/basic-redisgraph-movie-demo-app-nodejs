@@ -14,3 +14,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+.m-0  {
+  margin: 0 !important;
+}
+.mr-2 {
+  margin-right: 24px;
+}
+
+.ml-3 {
+  margin-left: 36px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.font-size-24 {
+  font-size: 24px;
+}
+
+.cursor-pointer {
+  cursor:pointer;
+}

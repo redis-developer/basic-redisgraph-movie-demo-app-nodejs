@@ -15,7 +15,7 @@ export const PageItem = ({info, films}) => {
             <img src={info.properties.poster} alt={info.properties.name} />
           )}
         </div>
-        <div className={'personInfoText'}>
+        <div className={'personInfoText'} style={{marginLeft: 20}}>
           <h4>{info.properties.name}</h4>
           <p>Born year: {info.properties.born[0]}</p>
           {info.properties.died ? (
@@ -27,7 +27,7 @@ export const PageItem = ({info, films}) => {
           {info.properties.bio ? (
             <p>{info.properties.bio}</p>
           ) : (
-            <p>Nothing information about this person</p>
+            <p>No information about this person</p>
           )}
         </div>
       </div>

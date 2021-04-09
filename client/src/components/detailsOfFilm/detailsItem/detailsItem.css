@@ -85,6 +85,7 @@
 
 .details .details-film-actors .card-actor .photoActor img:first-child{
     height: 180px;
+    object-fit: cover;
     width: 100%;
 }
 

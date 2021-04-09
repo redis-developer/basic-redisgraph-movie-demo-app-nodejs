@@ -8,7 +8,7 @@ export const BaseLayout = ({children}) => {
       <header>
         <Header />
       </header>
-      <main>{children}</main>
+      <main style={{padding: '0 36px'}}>{children}</main>
       <footer>
         <Footer />
       </footer>

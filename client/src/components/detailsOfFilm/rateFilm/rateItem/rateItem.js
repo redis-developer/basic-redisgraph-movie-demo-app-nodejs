@@ -6,7 +6,9 @@ export const RateItem = ({handleRate, arr}) => {
       <h4>Rate this film!</h4>
       <ul>
         {arr.map((value) => (
-          <li onClick={() => handleRate(value)}>{value}</li>
+          <li key={value} onClick={() => handleRate(value)}>
+            {value}
+          </li>
         ))}
       </ul>
       <span>Bad</span>

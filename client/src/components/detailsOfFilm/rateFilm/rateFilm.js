@@ -13,6 +13,7 @@ export const RateFilm = () => {
     const response = await moviesService.rateMovie(id, value);
     setSuccess(true);
     console.log(response);
+    setTimeout(() => window.location.reload(), 200);
   };
 
   const arrRating = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -20,7 +21,7 @@ export const RateFilm = () => {
   return (
     <div className={'ratePage'}>
       {success ? (
-        <h4>Thank you for rate!</h4>
+        <h4>Thank you for your rating!</h4>
       ) : (
         <RateItem handleRate={handleRate} arr={arrRating} />
       )}

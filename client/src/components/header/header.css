@@ -12,7 +12,6 @@
 
 .headerSection h3 a{
     color: white;
-    margin-left: 550px;
     text-decoration: none;
 }
 .headerSection h2 a{
@@ -33,31 +32,20 @@
 }
 
 .headerSection .logo{
-    flex: 1;
     display: flex;
     align-items: center;
 }
 
 .headerSection .auth{
-    flex: 1;
     display: flex;
     align-items: center;
 }
 
 .headerSection .auth img{
     border-radius: 50%;
-   width: 100%;
 }
 
 .headerSection .logo img{
     border-radius: 50%;
     width: 100%;
-}
-.headerSection .logo a{
-    width: 10%;
-    margin-left: 50px;
-}
-.headerSection .auth a{
-    width: 8%;
-    margin-left: 450px;
 }

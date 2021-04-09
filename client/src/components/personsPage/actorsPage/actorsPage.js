@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router';
-import {personService} from '../../../services';
+import {personService, useRatedFilms} from '../../../services';
 import {PageItem} from '../pageItem';
 import {Loading} from '../../loading';
 
@@ -20,12 +20,14 @@ export const ActorsPage = () => {
     handleActorData();
   }, []);
 
+  const {adjustRating, loading: ratedFilmsLoading} = useRatedFilms();
+
   return (
     <div>
-      {loading ? (
+      {loading || ratedFilmsLoading ? (
         <Loading />
       ) : (
-        <PageItem info={actors.actor} films={actors.movies} />
+        <PageItem info={actors.actor} films={adjustRating(actors.movies)} />
       )}
     </div>
   );

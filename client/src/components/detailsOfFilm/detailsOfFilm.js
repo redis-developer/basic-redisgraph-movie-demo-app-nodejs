@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {moviesService} from '../../services';
+import {moviesService, useRatedFilms} from '../../services';
 import './detailsOfFilm.css';
 import {useLocation, useHistory} from 'react-router-dom';
 import {DetailsItem} from './detailsItem';
@@ -24,6 +24,8 @@ export const DetailsOfFilm = () => {
     handleGetOneMovie();
   }, []);
 
+  const {adjustRating} = useRatedFilms();
+
   const handleGetIdActors = (id) => {
     history.push(`/actors/${id}`);
   };
@@ -38,7 +40,7 @@ export const DetailsOfFilm = () => {
         <Loading />
       ) : (
         <DetailsItem
-          film={film}
+          film={adjustRating([film])[0]}
           handleGetIdActors={handleGetIdActors}
           handleGetIdDirectors={handleGetIdDirectors}
         />

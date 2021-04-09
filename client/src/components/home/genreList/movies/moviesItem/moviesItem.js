@@ -46,8 +46,7 @@ export const MoviesItem = ({items, name}) => {
       <div className={'modalWindow'}>
         {active ? (
           <Modal active={active} setActive={setActive}>
-            <h4>Some problems...</h4>
-            <h4>
+            <h4 style={{marginTop: 72}}>
               <Link to={'/authorization'}>Sign up</Link> to see the details of
               the movie
             </h4>

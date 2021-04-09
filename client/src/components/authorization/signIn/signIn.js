@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {userService} from '../../../services';
-import {useHistory} from 'react-router';
+import {useRatedFilms} from '../../../services/user.service';
 
 export const SignIn = ({handleChangeState, error, setError}) => {
-  const history = useHistory();
+  const {revalidate} = useRatedFilms();
 
   const handleSignIn = async (e) => {
     console.log('from handle');
@@ -17,24 +17,48 @@ export const SignIn = ({handleChangeState, error, setError}) => {
     } else {
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
+      revalidate();
       window.location.href = '/';
     }
   };
 
   return (
     <div className={'authFormSection'}>
-      <h3>Sign in</h3>
+      <h3 style={{marginBottom: 24}}>Sign in</h3>
       <div>
         <form action="" method="POST" onSubmit={handleSignIn}>
           <span>Enter your name</span>
-          <input type="text" name="username" required />
+          <div style={{padding: '0 20px'}}>
+            <input
+              type="text"
+              name="username"
+              required
+              style={{paddingLeft: 10, background: '#222'}}
+              placeholder="e.g., username"
+            />
+          </div>
           <span>Enter your password</span>
-          <input type="password" name="passwordUser" required />
+          <div style={{padding: '0 20px'}}>
+            <input
+              type="password"
+              name="passwordUser"
+              required
+              style={{paddingLeft: 10, background: '#222'}}
+              placeholder="e.g., ***********"
+            />
+          </div>
           <p>{error}</p>
-          <button type="submit">Sign in</button>
+          <div style={{padding: '0 14px'}}>
+            <button type="submit">Sign in</button>
+          </div>
         </form>
       </div>
-      <button onClick={handleChangeState} id="toSignUp">
+      <button
+        onClick={() => {
+          setError(null);
+          handleChangeState();
+        }}
+        id="toSignUp">
         Create your account
       </button>
     </div>

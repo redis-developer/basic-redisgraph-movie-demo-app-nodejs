@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import {moviesService} from '../../../../services';
+import {moviesService, useRatedFilms} from '../../../../services';
 import {MoviesItem} from './moviesItem';
 import './movies.css';
+import {Loading} from '../../../loading';
 
 export const Movies = ({name, setStyles}) => {
   const [films, setFilms] = useState([]);
+
+  const {adjustRating, loading: ratedFilmsLoading} = useRatedFilms();
 
   const handleFilmsData = async () => {
     const response = await moviesService.getMoviesWithGenre(name);
@@ -19,9 +22,11 @@ export const Movies = ({name, setStyles}) => {
     handleFilmsData();
   }, []);
 
-  return (
+  return ratedFilmsLoading ? (
+    <Loading />
+  ) : (
     <div className={'film-row'}>
-      {films.map((value, index) => (
+      {adjustRating(films).map((value, index) => (
         <MoviesItem items={value} key={index} name={name} />
       ))}
     </div>

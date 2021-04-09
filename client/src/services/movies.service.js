@@ -18,7 +18,8 @@ class MoviesService {
 
   async rateMovie(id, number) {
     const userToken = await localStorage.getItem('token');
-    return AXIOS.post(
+
+    const response = AXIOS.post(
       `/movies/${id}/rate`,
       {
         rating: number,
@@ -29,6 +30,8 @@ class MoviesService {
         },
       },
     );
+
+    return response;
   }
 }
 
