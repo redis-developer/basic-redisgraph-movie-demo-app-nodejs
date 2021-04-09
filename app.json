@@ -1,5 +1,5 @@
 {
-  "name": "Node.JS Redis chat",
+  "name": "Node.JS RedisGraph demo",
   "stack": "container",
   "env": {
     "REDIS_ENDPOINT_URL": {
