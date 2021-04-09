@@ -81,6 +81,30 @@ exports.actors = [
   },
   {
     actor: {
+      identity: {low: 14838, high: 0},
+      labels: ['Actor', 'Person'],
+      properties: {
+        bornIn: 'Concord, California, USA',
+        tmdbId: '31',
+        imdbId: '0000158',
+        born: {
+          year: {low: 1956, high: 0},
+          month: {low: 7, high: 0},
+          day: {low: 9, high: 0},
+        },
+        name: 'Tom Hanks',
+        bio:
+          'Thomas Jeffrey Hanks (born July 9, 1956) is an American actor and filmmaker.  Known for both his comedic and dramatic roles, Hanks is one of the most popular and recognizable film stars worldwide, and is widely regarded as an American cultural icon. \n\nHanks made his breakthrough with leading roles in the comedies Splash (1984) and Big (1988)...',
+        poster:
+          'https://image.tmdb.org/t/p/w440_and_h660_face/mKr8PN8sn80LzVaZMg8L52kmakm.jpg',
+        url: 'https://themoviedb.org/person/31',
+      },
+    },
+    movieTitle: 'Forrest Gump',
+    role: 'Forrest Gump',
+  },
+  {
+    actor: {
       identity: {low: 12086, high: 0},
       labels: ['Actor', 'Person'],
       properties: {

@@ -1,4 +1,6 @@
 exports.moviesWithGenres = [
+  {movieTitle: 'Forrest Gump', genre: 'Romance'},
+  {movieTitle: 'Forrest Gump', genre: 'Drama'},
   {movieTitle: 'Toy Story', genre: 'Adventure'},
   {movieTitle: 'Toy Story', genre: 'Animation'},
   {movieTitle: 'Toy Story', genre: 'Children'},

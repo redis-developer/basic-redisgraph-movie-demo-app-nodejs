@@ -32,7 +32,7 @@ export const PageItem = ({info, films}) => {
         </div>
       </div>
       <h3>Films of this person: </h3>
-      <div className={'film-row-person'}>
+      <div className="film-row-person film-row">
         {films.map((value, index) => (
           <MoviesItem key={index} items={value} name={'genre'} />
         ))}

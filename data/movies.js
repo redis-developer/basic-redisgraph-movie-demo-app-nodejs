@@ -26,6 +26,32 @@ exports.movies = [
     duration: 81,
   },
   {
+    languages: ['English'],
+    year: {low: 1994, high: 0},
+    imdbId: '8844192',
+    runtime: {low: 142, high: 0},
+    imdbRating: 8.8,
+    movieId: '8844192',
+    countries: ['USA'],
+    imdbVotes: {low: 1835137, high: 0},
+    title: 'Forrest Gump',
+    url: 'https://www.themoviedb.org/movie/13-forrest-gump',
+    revenue: {low: 677387716, high: 0},
+    tmdbId: '8844192',
+    plot:
+      'A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him.',
+    poster:
+      'https://www.themoviedb.org/t/p/w1280/h5J4W4veyxMXDMjeNxZI46TsHOb.jpg',
+    released: '1994-07-06',
+    budget: {low: 65000000, high: 0},
+    id: '8844192',
+    poster_image:
+      'https://image.tmdb.org/t/p/w440_and_h660_face/vgpXmVaVyUL7GGiDeiK1mKEKzcX.jpg',
+    tagline:
+      "Life is like a box of chocolates...you never know what you're gonna get",
+    duration: 104,
+  },
+  {
     languages: ['English', ' French'],
     year: {low: 1995, high: 0},
     imdbId: '0113497',
