@@ -35,7 +35,6 @@ nconf
     REDIS_PASSWORD: REDIS_PASSWORD,
     GRAPH_NAME: process.env.GRAPH_NAME || 'MovieApp',
 
-    base_url: 'http://localhost:3001',
     api_path: '/api',
   });
 

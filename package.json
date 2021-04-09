@@ -1,11 +1,6 @@
 {
   "name": "neo4j-movies-api",
   "version": "0.0.20",
-  "author": {
-    "name": "The SilveLogic",
-    "email": "info@tsl.io",
-    "url": "tsl.io"
-  },
   "description": "API for a movie demo app using Neo4j",
   "repository": {
     "type": "git",
@@ -26,7 +21,7 @@
     "npm": "1.2.x"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "connect-history-api-fallback": "^1.6.0",
     "dotenv": "^8.2.0",
     "errorhandler": "^1.5.1",
     "express": "^4.17.1",
@@ -57,10 +52,12 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "lint-staged": "^10.5.2",
+    "nodemon": "^2.0.7",
     "prettier": "^2.2.1"
   },
   "license": "MIT",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   }
 }
