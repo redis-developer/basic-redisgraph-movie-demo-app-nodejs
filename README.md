@@ -2,7 +2,7 @@
 
 An IMDB clone application based on RedisGraph and NodeJS with basic account authentication and movie recommendation functionality.
 
-<a href="docs/a.png"><img src="docs/a.png" width="48%"></a> <a href="docs/a.png"><img src="docs/d.png" width="48%"></a>
+<a href="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/a.png"><img src="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/a.png" width="48%"></a> <a href="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/a.png"><img src="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/d.png" width="48%"></a>
 
 ## Technical Stacks
 
@@ -20,7 +20,7 @@ The app consumes the data provided by the Express API and presents it through so
 
 ### Home page
 
-![How it works](docs/a.png)
+![How it works](https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/a.png)
 
 The home page shows the genres and a brief listing of movies associated with them. 
 
@@ -97,7 +97,7 @@ const getByGenre = function (session, genreId) {
 
 ### Sign-up and Login pages
 
-<a href="docs/f.png"><img src="docs/f.png" width="48%"></a> <a href="docs/g.png"><img src="docs/g.png" width="48%"></a>
+<a href="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/f.png"><img src="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/f.png" width="48%"></a> <a href="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/g.png"><img src="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/g.png" width="48%"></a>
 
 To be able to rate movies a user needs to be logged in: for that a basic JWT-based authentication system is implemented, where user details are stored in the RedisGraph for persistence.
 
@@ -138,7 +138,7 @@ const me = function (session, apiKey) {
 
 ### Movie detail page
 
-![How it works](docs/d.png)
+![How it works](https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/d.png)
 
 On this page a user can rate the film and view the Actors/directors who participated in the production of the film. 
 
@@ -217,7 +217,7 @@ const getById = function (session, movieId, userId) {
 
 
 ### Actor and Director detail page
-![How it works](docs/c.png)
+![How it works](https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/c.png)
 
 #### How the data is accessed
 
@@ -251,7 +251,7 @@ const getByDirector = function (session, personId) {
 ```
 
 ### User detail page 
-![How it works](docs/b.png)
+![How it works](https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/b.png)
 
 Shows the profile info and movies which were rated by user
 
