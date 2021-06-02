@@ -32,7 +32,7 @@
     "UNION"
   ],
   "redis_modules": ["RedisGraph"],
-  "app_image_urls": [],
+  "app_image_urls": ["https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/a.png"],
   "youtube_url": "",
   "special_tags": [],
   "verticals": ["Movies"],
