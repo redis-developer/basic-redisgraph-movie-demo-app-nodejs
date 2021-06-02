@@ -1,10 +1,10 @@
-# A Movie database demo project in NodeJS based on RedisGraph
+# Movie database demo project in NodeJS based on RedisGraph
 
 An IMDB clone application based on RedisGraph and NodeJS with basic account authentication and movie recommendation functionality.
 
 <a href="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/a.png"><img src="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/a.png" width="48%"></a> <a href="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/a.png"><img src="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/d.png" width="48%"></a>
 
-## Technical Stacks
+## Technical Stack
 
 - Frontend - _React_
 - Backend - _Node.js_, _Redis_, _RedisGraph_
