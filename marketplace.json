@@ -1,6 +1,6 @@
 {
-  "app_name": "Movie Database Demo app in NodeJS",
-  "description": "Movie Database Demo app in NodeJS based on RedisGraph",
+  "app_name": "Movie Database app in NodeJS",
+  "description": "Movie Database app in NodeJS based on RedisGraph",
   "type": "App",
   "contributed_by": "Redis Labs",
   "repo_url": "https://github.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs",
