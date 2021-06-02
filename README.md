@@ -1,6 +1,6 @@
-# Basic RedisGraph Movie demo (Node.js)
+# A Movie database demo project in NodeJS based on RedisGraph
 
-Showcases how to use RedisGraph in Node.js. The application is an IMDB clone with basic account authentication and movie recommendation functionality.
+An IMDB clone application based on RedisGraph and NodeJS with basic account authentication and movie recommendation functionality.
 
 <a href="docs/a.png"><img src="docs/a.png" width="48%"></a> <a href="docs/a.png"><img src="docs/d.png" width="48%"></a>
 
