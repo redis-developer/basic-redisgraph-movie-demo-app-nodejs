@@ -1,5 +1,5 @@
 {
-  "app_name": "A Movie Database Demo in NodeJS",
+  "app_name": "A Movie Database Demo app in NodeJS",
   "description": "A Movie Database Demo app in NodeJS based on RedisGraph",
   "type": "App",
   "contributed_by": "Redis Labs",
