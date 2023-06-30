@@ -1,13 +1,13 @@
-# Movie database app in NodeJS based on RedisGraph
+# Movie database app in NodeJS based on Redis Graph
 
-An IMDB clone application based on RedisGraph and NodeJS with basic account authentication and movie recommendation functionality.
+An IMDB clone application based on Redis Graph and NodeJS with basic account authentication and movie recommendation functionality.
 
 <a href="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/a.png"><img src="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/a.png" width="48%"></a> <a href="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/a.png"><img src="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/d.png" width="48%"></a>
 
 ## Technical Stack
 
 - Frontend - _React_
-- Backend - _Node.js_, _Redis_, _RedisGraph_
+- Backend - _Node.js_, _Redis_, _Redis Graph_
 
 ## How it works
 
@@ -22,7 +22,7 @@ The app consumes the data provided by the Express API and presents it through so
 
 ![How it works](https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/a.png)
 
-The home page shows the genres and a brief listing of movies associated with them. 
+The home page shows the genres and a brief listing of movies associated with them.
 
 #### How the data is stored
 
@@ -34,32 +34,32 @@ create (g:Genre{name:"Adventure"})
 Add a movie:
 ```Cypher
 create (m:Movie {
-    url: "https://themoviedb.org/movie/862", 
-    id:232, 
-    languages:["English"], 
-    title:"Toy Story", 
-    countries:["USA"], 
-    budget:30000000, 
-    duration:81, 
-    imdbId:"0114709", 
-    imdbRating:8.3, 
-    imdbVotes:591836, 
-    movieId:42, 
-    plot:"...", 
-    poster:"https://image.tmd...", 
-    poster_image:"https://image.tmdb.or...", 
-    released:"1995-11-22", 
-    revenue:373554033, 
-    runtime:$runtime, 
-    tagline:"A cowboy doll is profoundly t...", 
-    tmdbId:"8844", 
+    url: "https://themoviedb.org/movie/862",
+    id:232,
+    languages:["English"],
+    title:"Toy Story",
+    countries:["USA"],
+    budget:30000000,
+    duration:81,
+    imdbId:"0114709",
+    imdbRating:8.3,
+    imdbVotes:591836,
+    movieId:42,
+    plot:"...",
+    poster:"https://image.tmd...",
+    poster_image:"https://image.tmdb.or...",
+    released:"1995-11-22",
+    revenue:373554033,
+    runtime:$runtime,
+    tagline:"A cowboy doll is profoundly t...",
+    tmdbId:"8844",
     year:"1995"})
 ```
 
 Set genre to a movie:
 ```Cypher
-MATCH (g:Genre), (m:Movie) 
-WHERE g.name = "Adventure" AND m.title = "Toy Story" 
+MATCH (g:Genre), (m:Movie)
+WHERE g.name = "Adventure" AND m.title = "Toy Story"
 CREATE (m)-[:IN_GENRE]->(g)
 ```
 
@@ -99,14 +99,14 @@ const getByGenre = function (session, genreId) {
 
 <a href="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/f.png"><img src="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/f.png" width="48%"></a> <a href="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/g.png"><img src="https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/g.png" width="48%"></a>
 
-To be able to rate movies a user needs to be logged in: for that a basic JWT-based authentication system is implemented, where user details are stored in the RedisGraph for persistence.
+To be able to rate movies a user needs to be logged in: for that a basic JWT-based authentication system is implemented, where user details are stored in the Redis Graph for persistence.
 
 #### How the data is stored
 
 Store user in the database:
 ```Cypher
-CREATE (user:User {id: 32, 
-username: "user", password: "hashed_password", api_key: "525d40da10be8ec75480"}) 
+CREATE (user:User {id: 32,
+username: "user", password: "hashed_password", api_key: "525d40da10be8ec75480"})
 RETURN user
 ```
 #### How the data is accessed
@@ -140,7 +140,7 @@ const me = function (session, apiKey) {
 
 ![How it works](https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/d.png)
 
-On this page a user can rate the film and view the Actors/directors who participated in the production of the film. 
+On this page a user can rate the film and view the Actors/directors who participated in the production of the film.
 
 #### How the data is stored
 
@@ -153,7 +153,7 @@ MATCH (m:Movie) WHERE m.title="Jumanji" CREATE (a:Actor :Person{
     name:"Robin Williams",
     poster:"https://image.tmdb.org/t/p/w440_and_...",
     tmdbId:"2157",
-    url:"https://themoviedb.org/person/2157"})-[r:ACTED_IN_MOVIE 
+    url:"https://themoviedb.org/person/2157"})-[r:ACTED_IN_MOVIE
     {role: "Alan Parrish"}]->(m)
 ```
 
@@ -250,7 +250,7 @@ const getByDirector = function (session, personId) {
 };
 ```
 
-### User detail page 
+### User detail page
 ![How it works](https://raw.githubusercontent.com/redis-developer/basic-redisgraph-movie-demo-app-nodejs/master/docs/b.png)
 
 Shows the profile info and movies which were rated by user
@@ -259,7 +259,7 @@ Shows the profile info and movies which were rated by user
 
 Set rating for a movie:
 ```Cypher
-MATCH (u:User {id: 42}),(m:Movie {tmdbId: 231})       
+MATCH (u:User {id: 42}),(m:Movie {tmdbId: 231})
 MERGE (u)-[r:RATED]->(m)
 SET r.rating = "7"
 RETURN m
